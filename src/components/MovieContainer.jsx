@@ -14,17 +14,18 @@ export default function MovieContainer({
   loading,
 }) {
   const { Search } = movieData || {};
+  let cols = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 5;
 
   return (
     <section className="movie-container">
-      <ImageList sx={{}} cols={5}>
+      <ImageList sx={{}} cols={cols}>
         {loading ? (
           Array.from({ length: 5 }).map((_, index) => (
             <Movie key={index} loading={loading} />
           ))
         ) : (
           <>
-            <ImageListItem key="Subheader" cols={5}>
+            <ImageListItem key="Subheader" cols={cols}>
               <ListSubheader component="div" sx={{ padding: 0 }}>
                 Search results for "{previosSearchValue}"
               </ListSubheader>
