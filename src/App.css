@@ -1,16 +1,14 @@
-.movie {
-  header {
+header {
+  text-align: center;
+}
+
+body {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .error-message {
     text-align: center;
-  }
-
-  body {
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .error-message {
-      text-align: center;
-    }
   }
 }
