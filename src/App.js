@@ -29,17 +29,13 @@ function App() {
   }
 
   useEffect(() => {
-    let timer = setTimeout(() => {
-      if (searchValue.trim().length > 0) {
-        setLoading(true);
-        setPreviousSearchValue(searchValue);
-        fetchData(url).then((data) => {
-          handleMovieData(data);
-        });
-      }
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    if (searchValue.trim().length > 0) {
+      setLoading(true);
+      setPreviousSearchValue(searchValue);
+      fetchData(url).then((data) => {
+        handleMovieData(data);
+      });
+    }
   }, [searchValue]);
 
   return (
