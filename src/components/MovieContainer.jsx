@@ -1,12 +1,7 @@
 import React from "react";
 import Movie from "./Movie";
 import "./MovieContainer.css";
-import {
-  ImageList,
-  ImageListItem,
-  ListSubheader,
-  Skeleton,
-} from "@mui/material";
+import { ImageList, ImageListItem, ListSubheader } from "@mui/material";
 
 export default function MovieContainer({
   movieData,
